@@ -1,18 +1,18 @@
-from codebreaker import Codebreaker
-
-intentos_totales = 10
-codebreaker = Codebreaker()
+from codebreaker import Code_Breaker
 
 intento = 0
+INTENTOS_TOTALES = 10
+codebreaker = Code_Breaker()
 
 print('Jugar Codebreaker!')
 
-while intento != intentos_totales:
-   number = input('Numero:');
-   resolve = codebreaker.adivinar(number)
-   print(resolve)
-   if resolve == True:
-      print('You win!!')
-      break
+while intento != INTENTOS_TOTALES:
+    number = input("Numero: ")
+    resolve = codebreaker.adivinar(number)
+    print(resolve)
 
+    if resolve is True:
+        print("You win!!")
+        break
 
+    intento += 1
